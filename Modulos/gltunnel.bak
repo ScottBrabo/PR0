@@ -16,7 +16,7 @@
 			clear
 			case $x in
 			1 | 01)
-			.criar
+			initcheck
 			;;
 			2 | 02)
 			bash <(curl -sL https://raw.githubusercontent.com/DTunnel0/DTCheckUser/master/install.sh)

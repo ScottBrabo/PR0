@@ -1,0 +1,36 @@
+#!/bin/bash
+    clear
+    figlet 'CHECKUSER' | boxes -d stone -p a0v0 | lolcat
+    echo -e "\033[01;31m║\033[1;31m\033[5;34;47m              GERENCIAR CHECKUSER              \033[1;33m \033[0m\033[01;31m║"
+    echo -e "\033[01;31m║\033[0m"
+    echo -e "\033[01;31m╠━─━─━─━─━─━─━─━─━─━─━─━─━─━─━─━─━╮\033[0m"
+    echo -e "\033[01;31m║\033[1;33m   ⚠️                       ⚠️   \033[01;31m║\033[0m"
+    echo -e "\033[01;31m║\033[1;33m ANTES DE GERENCIAR O CHECKUSER  \033[01;31m║\033[0m"
+    echo -e "\033[01;31m║\033[1;33m INSTALE OS RECURSOS             \033[01;31m║\033[0m"
+    echo -e "\033[01;31m╠━─━─━─━─━─━─━─━─━─━─━─━─━─━─━─━─━╯\033[0m"
+    echo -e "\033[01;31m║\033[0m"
+    echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 01 •\033[1;34m]\033[1;37m ➩  \033[1;33mGERENCIAR CHECKUSER \033[0m"
+    echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 02 •\033[1;34m]\033[1;37m ➩  \033[1;33mINSTALAR RECURSOS ⚠️ \033[0m"
+    echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 00 •\033[1;34m]\033[1;37m ➩  \033[1;33mVOLTAR  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
+    echo -e "\033[01;31m║\033[0m"
+    tput civis
+    echo -ne "\033[1;31m╰━━━━━━━━❪\033[1;32mESCOLHA OPÇÃO DESEJADA\033[1;33m\033[1;31m\033[1;37m : "; read x
+case "$x" in
+			1 | 01)
+				initcheck
+				;;
+			2 | 02)
+				instcheck.sh
+				;;
+			0 | 00)
+				clear
+				menu
+				;;
+			*)
+				echo -e "\033[1;31mOpcao invalida !\033[0m"
+				sleep 2
+				;;
+			esac
+		done
+	}
+}
