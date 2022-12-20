@@ -1,6 +1,6 @@
 #!/bin/bash
     clear
-    echo -e "BAD VPN" | lolcat
+    figlet -e "BAD VPN" | lolcat
     echo -e "\033[46;1;37m                 ★  MENU BADVPN  ★                  \033[0m"
     echo -e " \033[47;1;30mATIVE O BADVPN PRIMEIRO ANTES DE ABRIR TODAS AS PORTAS \033[0m"
     echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 01 •\033[1;34m]\033[1;37m ➩  \033[47;1;30mBADVPN PRO $stsu\033[0m"
