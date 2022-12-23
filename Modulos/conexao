@@ -1457,7 +1457,7 @@ exit 0' >$RCLOCAL
 				sndbuf 0
 				rcvbuf 0
 				remote /SSHPLUS? $porta
-				#payload "HTTP/1.1 [lf]CONNECT HTTP/1.1[lf][lf]|[lf]."
+				#payload "HTTP/1.1 [lf]CONNECT HTTP/1.1[lf][lf]|[lf]"
 				http-proxy $IP $pt_proxy
 				resolv-retry 5
 				nobind
