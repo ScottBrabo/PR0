@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 figlet "USUARIOS" | lolcat
-    echo -e "╔─━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━─╗" | lolcat
+    echo -e "╔─━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━─╗" | lolcat
 echo -e "\E[44;1;37m USUÁRIO        SENHA       LIMITE      VALIDADE \E[0m"
 echo ""
 [[ ! -e /bin/versao ]] && rm -rf /bin/menu
@@ -37,8 +37,8 @@ Senha=$(printf '%-13s' "$senha")
 Limite=$(printf '%-10s' "$lim")
 Data=$(printf '%-1s' "$data")
 echo -e "\033[1;33m$Usuario \033[1;37m$Senha \033[1;37m$Limite \033[1;32m$Data\033[0m"
-    echo -e "╚─━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━─╝" | lolcat
-echo -e "\033[1;33m• \033[1;36mTOTAL USUARIOS\033[1;37m $vt \033[0m"
+    echo -e "╚─━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━─╝" | lolcat
+echo -e "\033[1;33m• \033[1;36mTOTAL USUARIOS\033[1;37m $_tuser \033[1;33m• \033[1;32mONLINES\033[1;37m: $_onli \033[1;33m• \033[1;31mVENCIDOS\033[1;37m: $_expuser \033[1;33m• VALOR: ${EXISTEM[1]} \033[0m"
 done
 
 
