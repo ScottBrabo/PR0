@@ -45,10 +45,10 @@ fun_botOnOff() {
         echo -e "\033[1;32mINICIANDO BOT THE ORION \033[0m\n"
         fun_bot1() {
         	[[ "$(grep -wc '16' /etc/issue.net)" != '0' ]] && {
-        		raw.githubusercontent.com/TH30R10N/PR0/main/Modulos/ShellBot.sh > /etc/SSHPlus/ShellBot.sh
+        		raw.githubusercontent.com/ScottBrabo/PR0/main/Modulos/ShellBot.sh > /etc/SSHPlus/ShellBot.sh
         	}
             [[ ! -e "/etc/SSHPlus/ShellBot.sh" ]] && {
-				wget -qO- https://raw.githubusercontent.com/TH30R10N/PR0/main/Modulos/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
+				wget -qO- https://raw.githubusercontent.com/ScottBrabo/PR0/main/Modulos/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
 			}
             cd /etc/SSHPlus
             screen -dmS bot_plus ./bot $tokenbot $iduser >/dev/null 2>&1
