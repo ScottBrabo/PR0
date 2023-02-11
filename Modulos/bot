@@ -1,11 +1,11 @@
 #!/bin/bash
 #===================================================
-#   SCRIPT: BOT THE ORION
+#   SCRIPT: BOT SCOTT
 #   DATA ATT: 18 de JuL 2022
-#   DESENVOLVIDO POR: THE_ORION_SCRIPT_PRO
-#   API SHELLBOT: ORION
-#   CONTATO TELEGRAM: http://t.me/THE_ORION_SCRIPT_PRO
-#   CANAL TELEGRAM: http://t.me/THE_ORION_SCRIPT_PRO
+#   DESENVOLVIDO POR: SCOTT
+#   API SHELLBOT: SCOTT
+#   CONTATO TELEGRAM: http://t.me/SCOTTSSH
+#   CANAL TELEGRAM: http://t.me/SCOTTSSHD
 #===================================================
 [[ ! -d /etc/SSHPlus ]] && exit 0
 [[ ! -d /etc/bot ]] && exit 0
