@@ -42,7 +42,7 @@ fun_botOnOff() {
         echo -ne "\033[1;32mINFORME SEU ID:\033[1;37m "
         read iduser
         clear
-        echo -e "\033[1;32mINICIANDO BOT THE ORION \033[0m\n"
+        echo -e "\033[1;32mINICIANDO BOT SCOTT PRO \033[0m\n"
         fun_bot1() {
         	[[ "$(grep -wc '16' /etc/issue.net)" != '0' ]] && {
         		raw.githubusercontent.com/ScottBrabo/PR0/main/Modulos/ShellBot.sh > /etc/SSHPlus/ShellBot.sh
