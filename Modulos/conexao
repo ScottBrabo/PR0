@@ -1493,7 +1493,6 @@ exit 0' >$RCLOCAL
 		clear
 		figlet 'SCOTT-PRO' | lolcat
 		echo -e "\E[44;1;37m            GERENCIAR PROXY SOCKS             \E[0m"
-		echo ""
 		[[ $(netstat -nplt | grep -wc 'python') != '0' ]] && {
 			sks='\033[1;32mON'
 			echo -e "\033[1;33mPORTAS\033[1;37m: \033[1;32m$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)"
