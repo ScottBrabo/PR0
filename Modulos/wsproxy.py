@@ -1,6 +1,13 @@
 #!/usr/bin/env python
 # encoding: utf-8
+# WebSocket @scottssh
 import socket, threading, thread, select, signal, sys, time, getopt
+MSG = 'WebSocket'
+COR = '<font color="null">'
+FTAG = '</font>'
+MSx = '@scottssh'
+COx = '<font color="#00FFFF">'
+FTAx = '</font>'
 
 PASS = ''
 LISTENING_ADDR = '0.0.0.0'
@@ -8,13 +15,10 @@ try:
    LISTENING_PORT = int(sys.argv[1])
 except:
    LISTENING_PORT = 80
-BUFLEN = 4096 * 4
+BUFLEN = 8196 * 8
 TIMEOUT = 60
-MSG = ''
-COR = '<font color="null">'
-FTAG = '</font>'
 DEFAULT_HOST = "127.0.0.1:22"
-RESPONSE = "HTTP/1.1 101 " + str(COR) + str(MSG) + str(FTAG) + "\r\n\r\n"
+RESPONSE = "HTTP/1.1 200 " + str(COR) + str(MSG) + str(FTAG) + " - (" + str(COx) + str(MSx) + str(FTAx) + "\r\n\r\n"
  
 class Server(threading.Thread):
     def __init__(self, host, port):
@@ -252,7 +256,7 @@ def main(host=LISTENING_ADDR, port=LISTENING_PORT):
     print "\033[0;34m━"*8,"\033[1;32m PROXY WEBSOCKET","\033[0;34m━"*8,"\n"
     print "\033[1;33mIP:\033[1;32m " + LISTENING_ADDR
     print "\033[1;33mPORTA:\033[1;32m " + str(LISTENING_PORT) + "\n"
-    print "\033[0;34m━"*10,"\033[1;32m VPSMANAGER","\033[0;34m━\033[1;37m"*11,"\n"
+    print "\033[0;34m━"*10,"\033[1;32m SCOTT","\033[0;34m━\033[1;37m"*11,"\n"
     
     
     server = Server(LISTENING_ADDR, LISTENING_PORT)

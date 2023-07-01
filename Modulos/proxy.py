@@ -1,5 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # encoding: utf-8
+# WebSecurity by @sottssh
 import socket, threading, thread, select, signal, sys, time
 from os import system
 system("clear")
@@ -12,11 +13,14 @@ except:
 PASS = ''
 BUFLEN = 8196 * 8
 TIMEOUT = 60
-MSG = ''
+MSG = 'WebSocket'
 COR = '<font color="null">'
 FTAG = '</font>'
+MSx = '@scottssh'
+COx = '<font color="#00FFFF">'
+FTAx = '</font>'
 DEFAULT_HOST = '0.0.0.0:22'
-RESPONSE = "HTTP/1.1 200 " + str(COR) + str(MSG) + str(FTAG) + "\r\n\r\n"
+RESPONSE = "HTTP/1.1 200 " + str(COR) + str(MSG) + str(FTAG) + " - (" + str(COx) + str(MSx) + str(FTAx) + "\r\n\r\n"
  
 class Server(threading.Thread):
     def __init__(self, host, port):
@@ -26,6 +30,7 @@ class Server(threading.Thread):
         self.port = port
         self.threads = []
 	self.threadsLock = threading.Lock()
+	self.logLock = threading.Lock()
 
     def run(self):
         self.soc = socket.socket(socket.AF_INET)
@@ -50,6 +55,10 @@ class Server(threading.Thread):
             self.running = False
             self.soc.close()
             
+    def printLog(self, log):
+        self.logLock.acquire()
+        print log
+        self.logLock.release()
 	
     def addConn(self, conn):
         try:
@@ -86,6 +95,7 @@ class ConnectionHandler(threading.Thread):
         self.client = socClient
         self.client_buffer = ''
         self.server = server
+        self.log = 'Conexao: ' + str(addr)
 
     def close(self):
         try:
@@ -136,6 +146,8 @@ class ConnectionHandler(threading.Thread):
                 self.client.send('HTTP/1.1 400 NoXRealHost!\r\n\r\n')
 
         except Exception as e:
+            self.log += ' - error: ' + e.strerror
+            self.server.printLog(self.log)
 	    pass
         finally:
             self.close()
@@ -174,9 +186,11 @@ class ConnectionHandler(threading.Thread):
         self.target.connect(address)
 
     def method_CONNECT(self, path):
+    	self.log += ' - CONNECT ' + path
         self.connect_target(path)
         self.client.sendall(RESPONSE)
         self.client_buffer = ''
+        self.server.printLog(self.log)
         self.doCONNECT()
                     
     def doCONNECT(self):
