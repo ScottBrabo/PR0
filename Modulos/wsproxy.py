@@ -2,7 +2,7 @@
 # encoding: utf-8
 # scottssh
 import socket, threading, thread, select, signal, sys, time, getopt
-MSG = '<h1 style="text-align:center"><span style="color:#c33bd2">@</span><span style="color:#8c72d5">s</span><span style="color:#55aad9">c</span><span style="color:#1de1dc">o</span><span style="color:#00ffdf">t</span><span style="color:#29c4e5">t</span><span style="color:#508cec">s</span><span style="color:#7754f4">s</span><span style="color:#9e1cfb">h</span></h1>'
+MSG = '<span style="color:#c33bd2">@</span><span style="color:#8c72d5">s</span><span style="color:#55aad9">c</span><span style="color:#1de1dc">o</span><span style="color:#00ffdf">t</span><span style="color:#29c4e5">t</span><span style="color:#508cec">s</span><span style="color:#7754f4">s</span><span style="color:#9e1cfb">h</span>'
 COR = '<font color="null">'
 FTAG = '</font>'
 PASS = ''
